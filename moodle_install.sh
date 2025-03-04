@@ -102,7 +102,8 @@ EOL
 # Step 10: Enable site and restart Apache
 echo_green "Step 10: Enabling the Moodle site and restarting Apache..."
 a2enmod rewrite
-a2ensite moodle
+a2ensite 000-default.conf
+a2ensite moodle.conf
 systemctl restart apache2
 
 # Step 11: Configure UFW (Uncomplicated Firewall) for HTTP and HTTPS
